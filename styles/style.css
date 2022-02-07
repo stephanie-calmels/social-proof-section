@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
+  background-color: white;
 }
 
 .proof {
@@ -92,19 +93,97 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 2rem;
 }
 .attribution a {
   color: #3e52a3;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
   .container {
+    width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr) 50px;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 3rem 5rem;
+  }
+
+  .proof {
+    grid-row: 1/2;
+    grid-column: 1/span 6;
+    text-align: left;
+  }
+  .proof__title {
+    padding: 0 6rem 0 0;
+    font-size: 51px;
+    margin-bottom: 0;
+  }
+  .proof__subtitle {
+    margin-right: 8rem;
+  }
+
+  .appreciations {
+    margin-left: 2rem;
+    grid-row: 1/2;
+    grid-column: 7/span 12;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .note {
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.1rem 2rem;
+    width: 400px;
+  }
+  .note__stars {
+    margin: 0;
+  }
+  .note__text {
+    margin: 0 2rem;
+  }
+  .note-1 {
+    grid-row: 1/2;
+    grid-column: 1/span 7;
+  }
+  .note-2 {
+    grid-row: 2/3;
+    grid-column: 2/span 7;
+  }
+  .note-3 {
+    grid-row: 3/4;
+    grid-column: 3/span 7;
   }
 
   .reviews {
-    display: flex;
+    margin-top: 2rem;
+    grid-row: 2/3;
+    grid-column: 1/span 12;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    column-gap: 2rem;
+  }
+
+  .customer {
+    margin: 0;
+  }
+  .customer-1 {
+    grid-row: 1/span 10;
+  }
+  .customer-2 {
+    grid-row: 2/span 10;
+  }
+  .customer-3 {
+    grid-row: 3/span 10;
+  }
+
+  .attribution {
+    margin-top: 8rem;
+    grid-row: 3/4;
+    grid-column: 1/span 12;
   }
 }
 
